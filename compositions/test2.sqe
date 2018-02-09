@@ -1,0 +1,97 @@
+version=53;
+center[]={13433.681,11.562,16522.465};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Group";
+		side="East";
+		class Entities
+		{
+			items=4;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.61816406,20.207483,-3.9023438};
+				};
+				side="East";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+				};
+				id=454;
+				type="rhs_msv_emr_sergeant";
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.63867188,20.434216,-3.25};
+				};
+				side="East";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+				};
+				id=455;
+				type="rhs_msv_emr_machinegunner";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={3.6181641,37.77124,-8.9023438};
+				};
+				side="East";
+				flags=1;
+				class Attributes
+				{
+					skill=0.40000001;
+				};
+				id=456;
+				type="rhs_msv_emr_grenadier_rpg";
+				atlOffset=2.3017693;
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={5.6181641,37.771049,-8.9023438};
+				};
+				side="East";
+				flags=1;
+				class Attributes
+				{
+					skill=0.44999999;
+					rank="CORPORAL";
+				};
+				id=457;
+				type="rhs_msv_emr_strelok_rpg_assist";
+				atlOffset=2.3015785;
+			};
+		};
+		class Attributes
+		{
+		};
+		id=453;
+	};
+	class Item1
+	{
+		dataType="Marker";
+		position[]={-7.7763672,0,14.103516};
+		name="marker_16";
+		text="ici";
+		type="mil_destroy";
+		colorName="ColorRed";
+		id=458;
+		atlOffset=-0.00045013428;
+	};
+};

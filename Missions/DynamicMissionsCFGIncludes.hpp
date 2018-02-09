@@ -1,0 +1,5 @@
+#include "cfgMRHMissions.hpp"
+#include "cfgMRHaceSlideShowObjects.hpp"
+#include "cfgMRHLoadouts.hpp"
+#include "cfgMRHUnitClasses.hpp"
+#include "cfgMRHRanksExtraInfo.hpp"

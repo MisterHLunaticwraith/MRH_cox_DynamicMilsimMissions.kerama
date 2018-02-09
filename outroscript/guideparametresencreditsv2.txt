@@ -1,0 +1,11 @@
+requiert le roleassign.sqf du module MRHteamRoster
+
+les parametres requis sont:
+0 ==> durée ==> integer Influe sur le pré et post crédit mais pas sur l'affichage des noms de joueurs. (recommandé 10)
+1 ==> titre de la mission ==> String
+2 ==> nom du mission maker ==> String
+3 ==> Remerciements ==> String
+4 == > Autre texte, mettre "" pour laisser vide, accepte le texte structuré. ==> String
+6 ==> Année ==> String
+example:
+[10, "Opération Test", "Mr. H", "TGV Redbelette", "Du texte suplémentaire <br/> poil aux pommes de terre", "2017"] execVM "outroscript\endcreditsv2.sqf";

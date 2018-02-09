@@ -1,0 +1,69 @@
+respawnOnStart = -1;
+
+
+// =============CFG======================================================
+
+/////=========cfgNotifications=====
+class cfgNotifications
+{
+#include"cfghpp\cfgnotifications.hpp"
+};
+////=============fincfgNotifications
+
+/////=========cfgParams============
+class Params
+{
+#include "cfghpp\cfgparams.hpp"
+};
+////=============fincfgParams======
+
+/////=========cfgDebriefings=======
+class CfgDebriefing
+{
+#include "cfghpp\cfgdebriefing.hpp"
+};
+////=============fincfgDebriefings=
+
+/////=========cfgFunctions========
+class CfgFunctions
+{
+	#include "cfghpp\cfgfunctions.hpp"
+	#include "MRHLoadOutAndClassSelector\cfgHPP\cfgfunctions.hpp"
+	#include "LARs\LARs_spawnComp.cpp"
+};
+////=============fincfgFunctions
+
+/////=========cfgSounds==========
+class CfgSounds
+{
+	#include "cfghpp\cfgsounds.hpp"
+};
+////=============fincfgSounds=====
+
+
+
+
+class Extended_PostInit_EventHandlers
+{
+   class MRHValuesInit
+   {
+      clientInit = "call compile preProcessFileLineNumbers 'MRHLoadOutAndClassSelector\Functions\fn_CBA_variables_Init.sqf'";
+   };
+};
+///MRHLoadOutAndClassSelector
+
+
+#include "MRHLoadOutAndClassSelector\dialogsHPP\defines.hpp"
+#include "MRHLoadOutAndClassSelector\dialogsHPP\SimpleListSelector.hpp"
+#include "MRHLoadOutAndClassSelector\dialogsHPP\LoadoutSelectorDialogs.hpp"
+#include "MRHLoadOutAndClassSelector\dialogsHPP\MissionPicker.hpp"
+#include "MRHLoadOutAndClassSelector\dialogsHPP\stopmissionmenu.hpp"
+#include "MRHLoadOutAndClassSelector\dialogsHPP\soldierpda.hpp"
+#include "Missions\DynamicMissionsCFGIncludes.hpp"
+///LARS comps
+#include "compositions\compositions.hpp"
+//CFGMissions
+
+allowFunctionsRecompile = 1;
+
+
