@@ -1,0 +1,10 @@
+params ["_playerInTarget"];
+_hasjumped = _playerInTarget getVariable "MRH_TRAINING1_HasJumped";
+if !(_hasjumped) ExitWith {};
+_jumpNumber = missionNameSpace getVariable "MRH_TRAINING1_JumpsCount";
+if (isNil "_jumpNumber") then {_jumpNumber = 0};
+_jumpNumber = _jumpNumber + 1;
+missionNameSpace setVariable ["MRH_TRAINING1_JumpsCount", _jumpNumber,true];
+_playerInTarget setVariable ["MRH_TRAINING1_HasJumped",false, true];
+hint format ["Vous avez effectué %1 sauts", str _jumpNumber];
+if (_jumpNumber >= 3) then { ["CustomMissionLaunched",["Mission terminée, vous avez effectué le nombre de sauts requis."]] call bis_fnc_showNotification; deleteVehicle MRH_TRAINING1_CheckItem;};
