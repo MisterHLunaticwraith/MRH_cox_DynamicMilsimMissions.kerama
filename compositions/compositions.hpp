@@ -20,5 +20,15 @@ class CfgCompositions
 		//op fromRussia withLove
 		#include "MRH_M1.sqe"
 	};
+		class MRH_TRAINING1_PARACHUTE_DAY_CMP 
+	{
+		
+		#include "MRH_TRAINING1_COMP.sqe"
+	};
+	
+	class MRH_TRAINING1_PARACHUTE_NIGHT_CMP
+	{
+		#include "MRH_TRAINING1NIGHT_COMP.sqe"
+	};
 };
 

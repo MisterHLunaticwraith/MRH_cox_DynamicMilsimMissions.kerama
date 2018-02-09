@@ -1,0 +1,682 @@
+version=53;
+center[]={13072.81,40.012806,17064.385};
+class items
+{
+	items=17;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-46.655273,0.84338379,0.515625};
+			angles[]={6.2581921,0,6.2402153};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			name="MRH_TRAINING1_CheckItem";
+		};
+		id=15;
+		type="RoadCone_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="hideObject";
+				expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=1;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.047851563,1.2242203,9.7441406};
+			angles[]={6.2812018,0,6.2561917};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[""<t size='2'>Prenez un parachute</t>"", getPos this, 15, 0] spawn BIS_fnc_3Dcredits;}";
+			name="supply";
+		};
+		id=4;
+		type="B_supplyCrate_F";
+		atlOffset=0.00059509277;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[""B_Parachute""],[200]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item2
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-7.8408203,0.5224762,12.671875};
+		};
+		side="Empty";
+		flags=5;
+		class Attributes
+		{
+		};
+		id=5;
+		type="VR_Area_01_circle_4_grey_F";
+		atlOffset=-3.8146973e-006;
+	};
+	class Item3
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-7.8378906,1.5722656,12.720703};
+		};
+		side="Empty";
+		flags=5;
+		class Attributes
+		{
+			init="call{[""<t size='2'>Entrer dans cette zone vous placera en altitude</t>"", getPos this, 15, 0] spawn BIS_fnc_3Dcredits;}";
+		};
+		id=6;
+		type="VR_3DSelector_01_default_F";
+		atlOffset=0.0012397766;
+	};
+	class Item4
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-13.109375,1.6298218,18.587891};
+		};
+		side="Empty";
+		flags=5;
+		class Attributes
+		{
+			init="call{[""<t size='2'>Entrer dans cette zone vous placera en altitude</t>"", getPos this, 15, 0] spawn BIS_fnc_3Dcredits;}";
+		};
+		id=7;
+		type="VR_3DSelector_01_exit_F";
+		atlOffset=0.0012435913;
+	};
+	class Item5
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-2.7050781,1.4490089,7.6914063};
+		};
+		side="Empty";
+		flags=5;
+		class Attributes
+		{
+			init="call{[""<t size='2'>Entrer dans cette zone vous placera en altitude</t>"", getPos this, 15, 0] spawn BIS_fnc_3Dcredits;}";
+		};
+		id=8;
+		type="VR_3DSelector_01_exit_F";
+		atlOffset=0.0014953613;
+	};
+	class Item6
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-2.8632813,1.4255562,17.324219};
+		};
+		side="Empty";
+		flags=5;
+		class Attributes
+		{
+			init="call{[""<t size='2'>Entrer dans cette zone vous placera en altitude</t>"", getPos this, 15, 0] spawn BIS_fnc_3Dcredits;}";
+		};
+		id=9;
+		type="VR_3DSelector_01_exit_F";
+		atlOffset=0.00074386597;
+	};
+	class Item7
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-13.178711,1.446209,8.0644531};
+		};
+		side="Empty";
+		flags=5;
+		class Attributes
+		{
+			init="call{[""<t size='2'>Entrer dans cette zone vous placera en altitude</t>"", getPos this, 15, 0] spawn BIS_fnc_3Dcredits;}";
+		};
+		id=11;
+		type="VR_3DSelector_01_exit_F";
+		atlOffset=0.0012435913;
+	};
+	class Item8
+	{
+		dataType="Trigger";
+		position[]={-7.4892578,0.51585007,12.476563};
+		class Attributes
+		{
+			condition="call{this}";
+			onActivation="call{{_x setPosATL getPosATL parachute; _x setVariable [""MRH_TRAINING1_HasJumped"",true, true];} forEach thisList;" \n "execVM ""Missions\Scripts\MRH_TRAINING1_SmokeOrFlare.sqf"";}";
+			sizeA=5;
+			sizeB=5;
+			sizeC=5;
+			repeatable=1;
+			activationBy="ANYPLAYER";
+			isRectangle=1;
+		};
+		id=10;
+		type="EmptyDetectorArea10x10";
+		atlOffset=0.0019950867;
+	};
+	class Item9
+	{
+		dataType="Trigger";
+		position[]={-46.500977,0.62960815,2.9628906};
+		class Attributes
+		{
+			condition="call{!alive MRH_TRAINING1_CheckItem;}";
+			onActivation="call{[""MRH_TRAINING1_PARACHUTETRAINING_DAY"",20] call MRH_fnc_endSelectedMission;" \n "hint ""debugover"";}";
+			sizeA=0;
+			sizeB=0;
+		};
+		id=16;
+		type="EmptyDetector";
+	};
+	class Item10
+	{
+		dataType="Logic";
+		class PositionInfo
+		{
+			position[]={-7.4580078,0.32195663,1.8105469};
+		};
+		id=19;
+		type="ModuleTaskCreate_F";
+		atlOffset=-3.8146973e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ModuleTaskCreate_F_Destination";
+				expression="_this setVariable ['Destination',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"SCALAR"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ModuleTaskCreate_F_Type";
+				expression="_this setVariable ['Type',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="whiteboard";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ModuleTaskCreate_F_ShowNotification";
+				expression="_this setVariable ['ShowNotification',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"SCALAR"
+							};
+						};
+						value=1;
+					};
+				};
+			};
+			class Attribute3
+			{
+				property="ModuleTaskCreate_F_Marker";
+				expression="_this setVariable ['Marker',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute4
+			{
+				property="ModuleTaskCreate_F_Title";
+				expression="_this setVariable ['Title',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="Sautez en parachute.";
+					};
+				};
+			};
+			class Attribute5
+			{
+				property="ModuleTaskCreate_F_Description";
+				expression="_this setVariable ['Description',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="Vous devez effectuer trois sauts en parachute en atterissant sur la cible pour réussir cette mission.";
+					};
+				};
+			};
+			class Attribute6
+			{
+				property="ModuleTaskCreate_F_ID";
+				expression="_this setVariable ['ID',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="MRH_TRAINING1_Tache";
+					};
+				};
+			};
+			class Attribute7
+			{
+				property="ModuleTaskCreate_F_AlwaysVisible";
+				expression="_this setVariable ['AlwaysVisible',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"SCALAR"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute8
+			{
+				property="ModuleTaskCreate_F_Owner";
+				expression="_this setVariable ['Owner',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"SCALAR"
+							};
+						};
+						value=3;
+					};
+				};
+			};
+			class Attribute9
+			{
+				property="ModuleTaskCreate_F_State";
+				expression="_this setVariable ['State',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="CREATED";
+					};
+				};
+			};
+			class Attribute10
+			{
+				property="ModuleTaskCreate_F_IDParent";
+				expression="_this setVariable ['IDParent',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			nAttributes=11;
+		};
+	};
+	class Item11
+	{
+		dataType="Logic";
+		class PositionInfo
+		{
+			position[]={-31.489258,0.38568878,7.5253906};
+		};
+		id=20;
+		type="ModuleTaskSetState_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ModuleTaskSetState_F_ShowNotification";
+				expression="_this setVariable ['ShowNotification',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"SCALAR"
+							};
+						};
+						value=1;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ModuleTaskSetState_F_State";
+				expression="_this setVariable ['State',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="SUCCEEDED";
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item12
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={4.5146484,0.21044159,9.3945313};
+					angles[]={0,3.4411433,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+				};
+				id=3;
+				type="rhsusf_army_ocp_rifleman_10th";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male04ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.05;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+			combatMode="BLUE";
+			behaviour="SAFE";
+			speedMode="LIMITED";
+		};
+		id=2;
+	};
+	class Item13
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-14.09668,500.19592,-29.380859};
+		};
+		side="Empty";
+		class Attributes
+		{
+			name="parachute";
+		};
+		id=12;
+		type="Land_HelipadEmpty_F";
+		atlOffset=500;
+	};
+	class Item14
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={100.26465,0.0018234253,-55.144531};
+			angles[]={6.2811952,0,0.0019896752};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			name="MRH_TRAINING1_LandingTarget";
+		};
+		id=14;
+		type="Land_JumpTarget_F";
+	};
+	class Item15
+	{
+		dataType="Trigger";
+		position[]={99.745117,0,-55.537109};
+		class Attributes
+		{
+			condition="call{this}";
+			onActivation="call{{[_x] execVM ""Missions\Scripts\MRH_TRAINING1_CountParachuted.sqf"";} forEach thisList;}";
+			sizeA=5;
+			sizeB=5;
+			sizeC=5;
+			repeatable=1;
+			activationBy="ANYPLAYER";
+			isRectangle=1;
+		};
+		id=13;
+		type="EmptyDetectorArea10x10";
+	};
+	class Item16
+	{
+		dataType="Marker";
+		position[]={-7.7324219,0.47480392,9.2714844};
+		name="MR_TRAINING1_Marqueur";
+		text="Départ de mission";
+		type="mil_circle";
+		id=18;
+	};
+};
+class connections
+{
+	class LinkIDProvider
+	{
+		nextID=2;
+	};
+	class Links
+	{
+		items=2;
+		class Item0
+		{
+			linkID=0;
+			item0=20;
+			item1=19;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item1
+		{
+			linkID=1;
+			item0=20;
+			item1=16;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+	};
+};

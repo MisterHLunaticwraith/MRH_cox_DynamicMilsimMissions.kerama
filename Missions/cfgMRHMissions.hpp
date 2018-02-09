@@ -5,7 +5,7 @@
 //setDate [year, month, day, hour, minute] 
 class CfgMRHMissions
 {
-allTGVMissions[]= {"TestMission","TestMission2", "TestMission3","MRH_M1_OPRussiaWithLove"};
+allTGVMissions[]= {"TestMission","TestMission2", "TestMission3","MRH_M1_OPRussiaWithLove","MRH_TRAINING1_PARACHUTETRAINING_DAY","MRH_TRAINING1_PARACHUTETRAINING_NIGHT"};
 deFaultResetTime[] = {2019,03,21,08,00}; //when a mission is finished server will reset at this date;
 deFaultResetWeather[] = {0,0,0,0,0}; // when a mission is finished weather params will be set at these
 		
@@ -79,6 +79,41 @@ deFaultResetWeather[] = {0,0,0,0,0}; // when a mission is finished weather param
 			MissionMakerPic = PICPATH(MMTagMRH.paa);
 			WeatherConditions[] = {0,0.1,0,0,0}; // valeur entre 0 = pas de 1= à fond de {1pluie, 2brouillard, 3vagues, 4éclairs, 5couverture nuageuses}
 			IndeAllegiance = 2; //statut des independants 0 = ennemis de tt le monde, 1 = neutres , 2 = alliés aux blufor 3 = alliés aux opfor
+		}
+		class MRH_TRAINING1_PARACHUTETRAINING_DAY
+		{
+			Displayname = "Entraînement parachute de jour";
+			MissionComp = "MRH_TRAINING1_PARACHUTE_DAY_CMP";
+			MissionTimeAndDate[] = {2019,03,21,10,00};
+			RecommendedPlayersNumber = 1; 
+			MissionSummary = "Cette mission est une mission d'entraînement au saut en parachute de jour.";
+			MissionBriefing = "Pour réussir cet entraînement vous devez accomplir trois sauts en parachute et atterrir sur la cible qui se trouve à côté des hélipads de la base. La cible sera marquée par un fumigène vert au moment du saut. Pour commencer la mission, rendez-vous en haut de la piste d'atterissage et munissez-vous d'un parachute dans la caisse, pénétrez dans la zone marquée par des plots rouges pour commencer le saut. Recommencez trois fois pour réussir cette mission."; 
+			AdditionalInfos = "Cette mission ne requiert pas de matériel particulier, un parachute vous sera fourni. Mission de jour et par temps clair."; 
+			ExtraInitScripts = SCRIPTPATH(MRH_TRAINING1_InitScript.sqf); 
+		    AdditionalPics[] = {{PICPATH(MRH_TRAINING1_Visual.jpg),"Visuel de la mission."},{PICPATH(MRH_TRAINING1_JumpTarget.jpg),"La cible à atteindre."},{PICPATH(MRH_TRAINING1_Box.jpg),"La zone de départ en haut de la piste"}}; 
+			CurrentMissionVar = "MRH_TRAINING1_PARATRAININGDAY";
+			MissionMaker = "Mr H."; 
+			MissionMakerPic = PICPATH(MMTagMRH.paa); 
+			WeatherConditions[] = {0,0,0,0,0.2}; 
+			IndeAllegiance = 1; 
+		}
+		
+		class MRH_TRAINING1_PARACHUTETRAINING_NIGHT
+		{
+			Displayname = "Entraînement parachute de nuit";
+			MissionComp = "MRH_TRAINING1_PARACHUTE_NIGHT_CMP";
+			MissionTimeAndDate[] = {2019,03,21,23,50};
+			RecommendedPlayersNumber = 1; 
+			MissionSummary = "Cette mission est une mission d'entraînement au saut en parachute de nuit.";
+			MissionBriefing = "Pour réussir cet entraînement vous devez accomplir trois sauts en parachute et atterrir sur la cible qui se trouve à côté des hélipads de la base. La cible sera marquée par un flare vert au moment du saut. Pour commencer la mission, rendez-vous en haut de la piste d'atterissage et munissez-vous d'un parachute dans la caisse, pénétrez dans la zone marquée par des plots rouges pour commencer le saut. Recommencez trois fois pour réussir cette mission."; 
+			AdditionalInfos = "Un parachute vous sera fourni. Mission de nuit, équipez-vous d'un loadout comprenant des LVN, temps orageux."; 
+			ExtraInitScripts = SCRIPTPATH(MRH_TRAINING1_InitScript.sqf); 
+		    AdditionalPics[] = {{PICPATH(MRH_TRAINING1_Visual.jpg),"Visuel de la mission."},{PICPATH(MRH_TRAINING1_JumpTarget.jpg),"La cible à atteindre."},{PICPATH(MRH_TRAINING1_Box.jpg),"La zone de départ en haut de la piste"}}; 
+			CurrentMissionVar = "MRH_TRAINING1_PARATRAININGDAY";
+			MissionMaker = "Mr H."; 
+			MissionMakerPic = PICPATH(MMTagMRH.paa); 
+			WeatherConditions[] = {0.8,0,0,1,1}; 
+			IndeAllegiance = 1; 
 		}
 		
 };

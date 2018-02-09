@@ -1,0 +1,1 @@
+player setVariable ["MRH_TRAINING1_HasJumped",false, true];
