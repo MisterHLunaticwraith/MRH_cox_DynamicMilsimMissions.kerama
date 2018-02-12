@@ -106,6 +106,8 @@ class MRH // Defines the "owner"
 		{};
 		class RefillBox
 		{};
+		class ServerSpawnComp
+		{};
 	};
 };
 		

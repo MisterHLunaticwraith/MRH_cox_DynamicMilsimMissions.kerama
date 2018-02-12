@@ -42,7 +42,8 @@ closedialog 0;
  _index = lbCurSel 1500;
 _missiontorun = lbData [1500, _index];
 
-[[_missiontorun], MRH_fnc_StartMission] RemoteExec ['Call', 0, true];
+[[_missiontorun], MRH_fnc_StartMission] RemoteExec ['Call', 0];
+[[_missiontorun], MRH_fnc_ServerSpawnComp] RemoteExec ['Call', 2];
 "];
 };
 case (_CaseValue == "isOk") : {
@@ -55,7 +56,8 @@ closedialog 0;
 
  _index = lbCurSel 1500;
 _missiontorun = lbData [1500, _index];
-[[_missiontorun], MRH_fnc_StartMission] RemoteExec ['Call', 0, true];
+[[_missiontorun], MRH_fnc_StartMission] RemoteExec ['Call', 0];
+[[_missiontorun], MRH_fnc_ServerSpawnComp] RemoteExec ['Call', 2];
 "];
 };
 ////endswitchbelow

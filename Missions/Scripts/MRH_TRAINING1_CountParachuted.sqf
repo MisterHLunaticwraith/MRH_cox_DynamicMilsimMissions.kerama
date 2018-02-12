@@ -1,5 +1,6 @@
 params ["_playerInTarget"];
 _hasjumped = _playerInTarget getVariable "MRH_TRAINING1_HasJumped";
+waitUntil {!isNil "_hasjumped"};
 if !(_hasjumped) ExitWith {};
 _jumpNumber = missionNameSpace getVariable "MRH_TRAINING1_JumpsCount";
 if (isNil "_jumpNumber") then {_jumpNumber = 0};

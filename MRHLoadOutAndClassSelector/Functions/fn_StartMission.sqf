@@ -29,8 +29,11 @@ if (_numberOfActiveMissions > 0) then { hint "Une mission est déjà en cours, l
 setDate _MissionTimeAndDate;
 [_weather] FUNC(ChangeWeather);
 };
-_compRef = [_MissionComp] call LARs_fnc_spawnComp;
-missionNameSpace SetVariable [ _CurrentMissionVar, _compRef, true];
+
+
+///launches extrascript
+if (_ExtraInitScript != "none") then {
+ExecVM _ExtraInitScript} else {systemchat "pas de script associé"};
 
 //// adds runningmissioninfotothe pile
 _numberOfActiveMissions = _numberOfActiveMissions + 1;
@@ -39,24 +42,32 @@ _runningMissionsList = missionNameSpace getVariable "MRH_RunningMissionsList";
 if (isNil "_runningMissionsList") then {_runningMissionsList = [];};
 _runningMissionsList pushBack _mission;
 missionNameSpace setVariable ["MRH_RunningMissionsList" , _runningMissionsList, true];
+
+/*
+////spawns the composition
+if (isServer) then {
+
+[[_MissionComp,_CurrentMissionVar], MRH_fnc_ServerSpawnComp] RemoteExec ["Call", 2];
+};
+*/
+
+/////following scripts are not run on the server
+if (!hasInterface) ExitWith {};
+
+////notification
 _CoreText = format ["Lancement de la mission : %1. Une mission créée par %2", _displayName, _MissionMaker];
-
-
 ["CustomMissionLaunched",[_CoreText]] call bis_fnc_showNotification;
 ////setaceslideshow
-//[[_displayName,_AdditionalPics],{FUNC(SetAceSlideShow)}] RemoteExec ["Call", 0, true];
-if (hasInterface) then {[_displayName,_AdditionalPics] FUNC(SetAceSlideShow);};
+//[[_displayName,_AdditionalPics],FUNC(SetAceSlideShow)] RemoteExec ["Call", 0, true];
+[_displayName,_AdditionalPics] FUNC(SetAceSlideShow);
 /// set inde allegiance
 [_IndeAllegiance] FUNC(ChangeIndeSide);
 
-///launches extrascript
-if (_ExtraInitScript != "none") then {
-ExecVM _ExtraInitScript} else {systemchat "pas de script associé"};
 
 
 
 ///showmissionsplashscreen 
-[[_displayName, _MissionMaker, _MissionMakerPic] spawn {
+[_displayName, _MissionMaker, _MissionMakerPic] spawn {
 params ["_displayName", "_MissionMaker", "_MissionMakerPic"];
 #include "MRH_components.hpp"
 sleep 10;
