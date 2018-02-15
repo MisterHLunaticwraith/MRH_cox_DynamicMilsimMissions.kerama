@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=595;
+		nextID=619;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=178;
+		nextID=206;
 	};
 	class Camera
 	{
-		pos[]={13220.38,47.656399,17002.758};
-		dir[]={0.43798542,-0.24458006,0.86521602};
-		up[]={0.11049628,0.96957815,0.21828036};
-		aside[]={0.89230072,9.2633127e-007,-0.45168811};
+		pos[]={13102.448,61.147984,16986.953};
+		dir[]={-0.80196434,-0.57472825,-0.16370685};
+		up[]={-0.56312573,0.81828958,-0.11495205};
+		aside[]={-0.20003302,-3.4051845e-007,0.97990799};
 	};
 };
 binarizationWanted=0;
@@ -606,12 +606,11 @@ class Mission
 	};
 	class Entities
 	{
-		items=1;
+		items=17;
 		class Item0
 		{
 			dataType="Layer";
 			name="BaseMission";
-			state=1;
 			class Entities
 			{
 				items=246;
@@ -2153,7 +2152,6 @@ class Mission
 					{
 					};
 					id=294;
-					atlOffset=20;
 				};
 				class Item24
 				{
@@ -6098,16 +6096,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={13231.919,41.581879,17048.879};
-						angles[]={0,2.6956995,0};
+						position[]={13231.919,41.582241,17048.879};
+						angles[]={0,2.6956959,0};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
+						init="call{[this] call MRH_fnc_isUavFeedScreen;}";
 					};
 					id=303;
 					type="Land_TripodScreen_01_large_F";
+					atlOffset=0.00036239624;
 				};
 				class Item215
 				{
@@ -7672,7 +7672,6 @@ class Mission
 					{
 					};
 					id=143;
-					atlOffset=20;
 				};
 				class Item235
 				{
@@ -7755,7 +7754,6 @@ class Mission
 					{
 					};
 					id=165;
-					atlOffset=20;
 				};
 				class Item236
 				{
@@ -7839,7 +7837,7 @@ class Mission
 					{
 					};
 					id=175;
-					atlOffset=20;
+					atlOffset=0.00048065186;
 				};
 				class Item237
 				{
@@ -7920,7 +7918,7 @@ class Mission
 					{
 					};
 					id=205;
-					atlOffset=20;
+					atlOffset=0.52999878;
 				};
 				class Item238
 				{
@@ -8003,7 +8001,7 @@ class Mission
 					{
 					};
 					id=217;
-					atlOffset=20;
+					atlOffset=0.00045776367;
 				};
 				class Item239
 				{
@@ -8192,7 +8190,290 @@ class Mission
 				};
 			};
 			id=472;
-			atlOffset=-0.21655273;
+			atlOffset=0.064395905;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13083.511,40.689999,16978.061};
+				angles[]={0,4.6935863,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=595;
+			type="Land_Cargo_House_V3_F";
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13079.77,41.1404,16976.432};
+				angles[]={0,4.7035789,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=597;
+			type="Land_CampingTable_F";
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13079.818,40.985889,16977.549};
+				angles[]={0,4.7377162,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=598;
+			type="Land_PCSet_01_case_F";
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13079.989,41.551933,16976.584};
+				angles[]={0,4.6336575,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{[this, uavspawn] call MRH_fnc_isUavTerminal;}";
+				name="testuavctrl";
+			};
+			id=599;
+			type="Land_PCSet_01_keyboard_F";
+			atlOffset=0.81515121;
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13079.988,41.548077,16976.969};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=600;
+			type="Land_PCSet_01_mousepad_F";
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13080.016,41.57692,16976.969};
+				angles[]={0,4.346447,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=601;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13079.64,41.798679,16975.988};
+				angles[]={0,4.2131896,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{[this] call MRH_fnc_isUavFeedScreen;}";
+				name="testuavscreen";
+			};
+			id=602;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.81515121;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13079.552,41.798679,16976.598};
+				angles[]={0,4.6623325,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{[this] call MRH_fnc_isUavFeedScreen;}";
+			};
+			id=603;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.81515121;
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13079.696,41.799126,16977.162};
+				angles[]={0,5.4067159,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=604;
+			type="Land_PCSet_01_screen_F";
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13080.035,41.571136,16975.977};
+				angles[]={0,4.1822147,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=605;
+			type="Land_GamingSet_01_controller_F";
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13080.86,41.235332,16976.66};
+				angles[]={0,1.360536,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=606;
+			type="Land_CampingChair_V2_F";
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13080.236,41.538502,16979.67};
+				angles[]={0,2.2424026,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=608;
+			type="Land_TripodScreen_01_dual_v1_F";
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13080.818,43.94574,16978.439};
+				angles[]={0,5.0870972,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=609;
+			type="Land_SatelliteAntenna_01_F";
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13082.342,43.996605,16975.945};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=610;
+			type="Satelit";
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13082.9,41.676624,16975.906};
+				angles[]={0,2.36008,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=611;
+			type="Land_PortableLight_single_F";
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13059.77,40.290081,17055.039};
+				angles[]={0,3.0809073,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="uavspawn";
+			};
+			id=612;
+			type="HeliHEmpty";
+			atlOffset=3.8146973e-006;
 		};
 	};
 };

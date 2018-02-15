@@ -5,81 +5,13 @@
 //setDate [year, month, day, hour, minute] 
 class CfgMRHMissions
 {
-allTGVMissions[]= {"TestMission","TestMission2", "TestMission3","MRH_M1_OPRussiaWithLove","MRH_TRAINING1_PARACHUTETRAINING_DAY","MRH_TRAINING1_PARACHUTETRAINING_NIGHT"};
+allTGVMissions[]= {"MRH_TRAINING1_PARACHUTETRAINING_DAY","MRH_TRAINING1_PARACHUTETRAINING_NIGHT","MRH_M1_OPREALPOLITIK"};
 deFaultResetTime[] = {2019,03,21,08,00}; //when a mission is finished server will reset at this date;
 deFaultResetWeather[] = {0,0,0,0,0}; // when a mission is finished weather params will be set at these
 		
-		class TestMission
-		{
-			Displayname = "Mission test";
-			MissionComp = "test";
-			MissionTimeAndDate[] = {1982,03,21,23,30};
-			RecommendedPlayersNumber = 1;
-			MissionSummary = "Cette mission est une <t color='#d68242'> mission de test </t>. Dans cette mission vous devez tuer des gens parce que blahblahblah blah blah blah";
-			MissionBriefing = "Tuez le gars blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah";
-			AdditionalInfos = "Cette mission requiert d'avoir un chibre énorme";
-			ExtraInitScripts = SCRIPTPATH(testscript.sqf);
-		    AdditionalPics[] = {{PICPATH(MRHTest1.jpg),"Imagetest"},{PICPATH(MRHTest2.jpg),"imagetest2"}};
-			CurrentMissionVar = "MissionTest";
-			MissionMaker = "Mr H.";
-			MissionMakerPic = PICPATH(MMTagMRH.paa);
-			WeatherConditions[] = {1,1,1,1,1}; // valeur entre 0 = pas de 1= à fond de {1pluie, 2brouillard, 3vagues, 4éclairs, 5couverture nuageuses}
-			IndeAllegiance = 1; //statut des independants 0 = ennemis de tt le monde, 1 = neutres , 2 = alliés aux blufor 3 = alliés aux opfor
-		}
+
 		
-		class TestMission2
-		{
-			Displayname = "Mission test 2";
-			MissionComp = "test";
-			MissionTimeAndDate[] = {1982,03,21,10,30};
-			RecommendedPlayersNumber = 1;
-			MissionSummary = "Cette mission est une mission de test. Dans cette mission vous devez tuer des gens parce que blahblahblah blah blah blah";
-			MissionBriefing = "Tuez le gars blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah";
-			AdditionalInfos = "Cette mission requiert d'avoir un chibre énorme";
-			ExtraInitScripts = "none";
-		    AdditionalPics[] = {{PICPATH(MRHTest1.jpg),"Imagetest"},{PICPATH(MRHTest2.jpg),"imagetest2"}};
-			CurrentMissionVar = "MissionTest";
-			MissionMaker = "Mr H.";
-			MissionMakerPic = PICPATH(MMTagMRH.paa);
-			WeatherConditions[] = {0,1,0,0,0}; // valeur entre 0 = pas de 1= à fond de {1pluie, 2brouillard, 3vagues, 4éclairs, 5couverture nuageuses}
-			IndeAllegiance = 1; //statut des independants 0 = ennemis de tt le monde, 1 = neutres , 2 = alliés aux blufor 3 = alliés aux opfor
-		}
-		
-		class TestMission3
-		{
-			Displayname = "Mission test encore";
-			MissionComp = "test";
-			MissionTimeAndDate[] = {1982,03,21,7,30};
-			RecommendedPlayersNumber = 1;
-			MissionSummary = "Cette mission est une mission de test. Dans cette mission vous devez tuer des gens parce que blahblahblah blah blah blah";
-			MissionBriefing = "Tuez le gars blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blahblahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah blahblahblah blah blah blah";
-			AdditionalInfos = "Cette mission requiert d'avoir un chibre énorme";
-			ExtraInitScripts = SCRIPTPATH(testscript.sqf);
-		    AdditionalPics[] = {{PICPATH(MRHTest1.jpg),"Imagetest"},{PICPATH(MRHTest2.jpg),"imagetest2"}};
-			CurrentMissionVar = "MissionTest";
-			MissionMaker = "Mr H.";
-			MissionMakerPic = PICPATH(MMTagMRH.paa);
-			WeatherConditions[] = {0,0,0,0,0}; // valeur entre 0 = pas de 1= à fond de {1pluie, 2brouillard, 3vagues, 4éclairs, 5couverture nuageuses}
-			IndeAllegiance = 1; //statut des independants 0 = ennemis de tt le monde, 1 = neutres , 2 = alliés aux blufor 3 = alliés aux opfor
-		}
-		
-		class MRH_M1_OPRussiaWithLove
-		{
-			Displayname = "Operation Russian";
-			MissionComp = "MRH_M1";
-			MissionTimeAndDate[] = {2019,03,21,6,30};
-			RecommendedPlayersNumber = 1;
-			MissionSummary = "Les forces Russes débarquent en petit nombre pour effectuer une reconnaissance, un sniper doit éliminer leur officier.";
-			MissionBriefing = "A remplir";
-			AdditionalInfos = "Cette mission requiert de préférence un tireur d'élite.";
-			ExtraInitScripts = SCRIPTPATH(MRH_M1_Init.sqf);
-		    AdditionalPics[] = {{PICPATH(MRH_M1_SatView.jpg),"Vue satellite de la zone"},{PICPATH(MRH_M1_Map.jpg),"Carte de la zone"},{PICPATH(MRH_M1_Target.jpg),"photo de la cible"}};
-			CurrentMissionVar = "MRH_M1_RussianLove";
-			MissionMaker = "Mr H.";
-			MissionMakerPic = PICPATH(MMTagMRH.paa);
-			WeatherConditions[] = {0,0.1,0,0,0}; // valeur entre 0 = pas de 1= à fond de {1pluie, 2brouillard, 3vagues, 4éclairs, 5couverture nuageuses}
-			IndeAllegiance = 2; //statut des independants 0 = ennemis de tt le monde, 1 = neutres , 2 = alliés aux blufor 3 = alliés aux opfor
-		}
+
 		class MRH_TRAINING1_PARACHUTETRAINING_DAY
 		{
 			Displayname = "Entraînement parachute de jour";
@@ -114,6 +46,25 @@ deFaultResetWeather[] = {0,0,0,0,0}; // when a mission is finished weather param
 			MissionMakerPic = PICPATH(MMTagMRH.paa); 
 			WeatherConditions[] = {0.8,0,0,1,1}; 
 			IndeAllegiance = 1; 
+		}
+		
+
+						class MRH_M1_OPREALPOLITIK
+		{
+			Displayname = "Opération Realpolitik";
+			MissionComp = "MRH_M1_OPREALPOLITIK_CMP";
+			MissionTimeAndDate[] = {2019,03,22,16,00};
+			RecommendedPlayersNumber = 3; 
+			MissionSummary = "Une rencontre va avoir lieu entre un officier russe et un représentant de la KIM (Kerama Independency Militia) dans le but de forger une alliance entre les deux camps. Une telle alliance bouleverserait l'équilibre des forces en place et est inacceptable vous devez l'empêcher de se conclure. ";
+			MissionBriefing = "Hier, à H2130 un de nos contacts infiltré au sein de la KIM (Kerama Independency Militia) nous a fait remonter une information de première importance: les russes négocient avec la KIM pour établir une alliance durable contre nous. Une telle alliance serait désastreuse pour notre position géostratégique dans la région. Heureusement notre contact a aussi pu nous faire parvenir des informations concernant le lieu et la date de cette rencontre. Ne ne pouvons pas intervenir en force sur place mais l'envoi d'un sniper a reçu le feu vert du commandement. <br/><br/>INTEL:<br/> Nous savons que les russes ont établi sur les hauteurs un petit QG mobile afin de protéger leur opération. Ce QG est faiblement défendu, probablement parce que l'ennemi cherche à maintenir une certaine discrétion pour son opération, mais sa position sur les hauteurs risque de perturber l'opération.<br/> Le meeting aura lieu dans la cour d'une vieille usine désaffectée un peu plus bas. Les russes sont déjà sur place et devraient être rejoints par un officer de la KIM par voie routière.<br/><br/>MISSION:<br/>Votre mission doit se dérouler de la manière la plus discrète possible c'est pourquoi nous recommandons de n'envoyer sur place qu'une équipe de tireurs d'élite et d'opérer au maximum à grande distance.<br/> Votre équipe devra d'abord sécuriser ses arrières en nettoyant la faible force présente sur le QG mobile russe.<br/> Une fois cette étape réussie choissisez une position qui vous donnera un avantage stratégique et préparez votre tir, mais n'engagez pas tant que le représentant de la KIM n'a pas pris contact avec l'officier russe, nous ne voulons pas le faire fuir! Vos seuls cibles impératives sont l'officier russe et l'officier de la milice, les autres cibles ne sont pas prioritaires. Ils doivent être impérativement abattus pour que votre mission soit réussie, prenez garde à n'engager que lorsque votre tir est optimal mais ne laissez pas non plus à l'ennemi l'opportunité de quitter la zone. Une fois vos cibles éliminées vous pouvez désengager."; 
+			AdditionalInfos = "Cette mission est pensée pour être effectuée par une équipe sniper /spotter"; 
+			ExtraInitScripts = "none"; 
+		    AdditionalPics[] = {{PICPATH(MRH_M1_TitleText.jpg),"Opération Realpolitik"},{PICPATH(MRH_M1_MilitiaTarget.jpg),"Cible n°1: l'officier de la KIM"},{PICPATH(MRH_M1_RussianOfficer.jpg),"Cible n°2: l'officer russe"},{PICPATH(MRH_M1_RussianHQ.jpg),"Un QG mobile russe standard."},{PICPATH(MRH_M1_Satview.jpg),"Analyse satellite de la zone."},{PICPATH(MRH_M1_StrategicMap.jpg),"Carte stratégique"}}; 
+			CurrentMissionVar = "MRH_M1_OPREALPOLITIK_VAR";
+			MissionMaker = "Mr H."; 
+			MissionMakerPic = PICPATH(MMTagMRH.paa); 
+			WeatherConditions[] = {0,0,0,0,0.2}; 
+			IndeAllegiance = 3; 
 		}
 		
 };

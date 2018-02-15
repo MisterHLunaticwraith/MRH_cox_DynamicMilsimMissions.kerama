@@ -109,6 +109,24 @@ class MRH // Defines the "owner"
 		class ServerSpawnComp
 		{};
 	};
+	class MRHUavControlCenter // tomoveelsewhere in case of mod conversion
+	{
+	tag = "MRH";
+	file = "MRHUavControlCenter";
+	    class isUavTerminal
+		{};
+		class isUavFeedScreen
+		{};
+		class SpawnMyUav
+		{};
+		class ControlUav
+		{};
+		class setUavPicturePip
+		{};
+		class RefreshAllUavScreens
+		{};
+
+	};
 };
 		
 		

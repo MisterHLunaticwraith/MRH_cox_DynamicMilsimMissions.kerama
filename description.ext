@@ -30,6 +30,7 @@ class CfgFunctions
 	#include "cfghpp\cfgfunctions.hpp"
 	#include "MRHLoadOutAndClassSelector\cfgHPP\cfgfunctions.hpp"
 	#include "LARs\LARs_spawnComp.cpp"
+	#include "MRHUavControlCenter\UAVCtrlFunctions.hpp"
 };
 ////=============fincfgFunctions
 
